@@ -3,19 +3,35 @@
 
 ## Установка PostgreSQL
 1. Установка PostgerSQL:
+
+
    sudo apt-get update
+
+
    sudo apt-get install postgresql postgresql-contrib
 
-2. Создание БД:
+3. Создание БД:
+
+
    sudo -i -u postgres
+
+
    psql
+
+
    CREATE DATABASE postgres WITH ENCODING 'UTF8';
 
-3. Создание пользователя:
+5. Создание пользователя:
+
+
    CREATE USER yersh WITH ENCRYPTED PASSWORD 'hyunjin34';
+
+
    GRANT ALL PRIVILEGES ON DATABASE postgres TO yersh;
 
-4. Инициализация БД:
+7. Инициализация БД:
+
+
    psql -U postgres -d postgres -f init.sql
 
 ## Инструкция по сборке и запуску
